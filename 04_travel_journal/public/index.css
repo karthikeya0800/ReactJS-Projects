@@ -1,0 +1,296 @@
+/* .nav{
+    position: absolute;
+    width: 550px;
+    height: 55px;
+    left: 0px;
+    top: 0px;
+
+    background: #F55A5A;
+}
+
+.nav--logo{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 213px;
+    top: 16px;
+}
+
+.nav--heading{
+    position: absolute;
+    width: 109px;
+    height: 16px;
+    left: 244px;
+    top: 5px;
+
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14.4608px;
+    line-height: 18px;
+    letter-spacing: -0.075em;
+
+    color: #FFFFFF;
+} */
+
+/* .place{
+    position: relative;
+    flex: 0 0 auto;
+    display: flex; */
+    /* flex-direction: column; */
+    
+    /* width: 340px; */
+    /* height: 168px;
+    left: 40px; */
+    /* top: 508px; */
+/* } */
+
+/* .place-info{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    width: 326px;
+    height: 129px;
+    left: 184px;
+    top: 527px;
+} */
+
+/* .place-img{ */
+    /* position: absolute; */
+    /* width: 50%;
+    margin: 100px 50px;
+    height: 198px;
+    left: 40px;
+    top: 508px;
+
+    border-radius: 5px;
+} */
+
+/* .loc-details{
+    display: flex;
+    padding-top: 100px;
+} */
+
+/* .loc-logo{ */
+    /* position: absolute; */
+    /* padding: 96px 30px; */
+    /* padding-top: 96px;
+    padding-left: 30px;
+    padding-bottom: 0px; */
+    /* width: 7px;
+    height: 9.55px;
+    left: calc(50% - 7px/2 - 87.5px);
+    top: calc(50% - 9.55px/2 - 227.23px);
+} */
+
+/* .place-location{ */
+    /* position: absolute;
+    padding: 4px 20px; */
+    /* padding-top: 4px;
+    padding-left: 20px;
+    padding-bottom: 0px; */
+    /* width: 40px;
+    height: 10px;
+    left: 195px;
+    top: 119px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10.24px;
+    line-height: 12px;
+    letter-spacing: 0.17em;
+
+    color: #2B283A;
+} */
+
+/* .place-mapurl{ */
+    /* position: absolute;
+    padding: 3px 20px; */
+    /* padding-top: 3px;
+    padding-left: 20px;
+    padding-bottom: 0px; */
+    /* width: 106px;
+    height: 13px;
+    left: 247px;
+    top: 119px; */
+
+    /* font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10.24px;
+    line-height: 12px; */
+    /* identical to box height */
+
+    /* text-decoration-line: underline;
+
+    color: #918E9B;
+} */
+
+/* .place-title{ */
+    /* position: absolute;
+    display: flex;
+    margin-top: 2px;
+    padding-left: 17px; */
+    /* width: 326px;
+    height: 40px;
+    left: 184px;
+    top: 136px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+
+    color: #2B283A;
+} */
+
+/* .place-duration{ */
+    /* position: absolute; */
+    /* display: flex */
+    /* margin-top: auto;
+    padding-left: 17px; */
+    /* width: 319px;
+    height: 11px;
+    left: 184px;
+    top: 183px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10.24px;
+    line-height: 12px;
+
+    color: #2B283A;
+} */
+
+/* .place-description{ */
+    /* position: absolute; */
+    /* margin-top: 100px; */
+    /* width: 326px;
+    height: 45px;
+    left: 184px;
+    top: 611px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10.24px;
+    line-height: 150%; */
+    /* or 15px */
+
+
+    /* color: #2B283A;
+} */
+
+
+
+.nav{
+    margin-bottom: 30px; 
+    position: relative;
+    width: 600px;
+    height: 55px;
+    left: 0px;
+    top: 0px;
+
+    background: #F55A5A;
+}
+
+.nav--logo{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 213px;
+    top: 16px;
+}
+
+.nav--heading{
+    position: absolute;
+    width: 109px;
+    height: 16px;
+    left: 244px;
+    top: 5px;
+
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14.4608px;
+    line-height: 18px;
+    letter-spacing: -0.075em;
+
+    color: #FFFFFF;
+}
+
+.card{
+    margin-left: 15px;
+}
+.place{
+    width: 600px;
+    height: 200px;
+    margin-top: 20px;
+    left: 40px;
+}
+
+.place-img{
+    float: left;
+    width: 150px;
+    height: 200px;
+    margin: 0px 15px;
+    border-radius: 5px;
+}
+
+.loc-logo{
+    width: 7px;
+    height: 9.55px;
+}
+
+.place-location{
+    padding-left: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10.24px;
+    line-height: 12px;
+    letter-spacing: 0.17em;
+
+    color: #2B283A;
+}
+
+.place-mapurl{
+    padding-left: 5px;
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10.24px;
+    line-height: 12px;
+
+    text-decoration-line: underline;
+
+    color: #918E9B;
+}
+
+.place-title{
+    margin-top: 3px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    color: #2B283A;
+}
+
+.place-duration{
+    margin-top: 0px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10.24px;
+    color: #2B283A;
+}
+
+.place-description{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10.24px;
+    line-height: 150%;
+
+    color: #2B283A;
+}
+
+.loc-details{
+    padding-top: 15px;
+}
