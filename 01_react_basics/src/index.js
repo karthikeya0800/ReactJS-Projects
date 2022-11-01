@@ -14,7 +14,7 @@ ReactDOM.render(
 
 const navbar=(
     <nav>
-        <h1>My Website</h1>
+        <h1>This is a dummy Website</h1>
         <ul>
             <li>Menu</li>
             <li>About</li>
