@@ -6,7 +6,7 @@ export default function Roll(props) {
             className="roll"
             onClick={props.onRoll}
         >
-            {props.isComplete?"Reset Game":"Roll"}
+            {props.isComplete?"New Game":"Roll"}
         </button>
     )
 }
