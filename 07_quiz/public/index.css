@@ -3,12 +3,12 @@ body{
 }
 
 .home{
-    width: 600px;
+    /* width: 600px;
     height: 600px;
     margin: 100px auto;
     background-color: #394F49;
-    border: 2px solid #EFDD8D;
-
+    border: 2px solid #EFDD8D; */
+    height: 100%;
     text-align: center;    
     display: flex;
     flex-direction: column;
@@ -60,12 +60,6 @@ body{
     font-family: "karla",sans-serif;
     font-size: 16px;
     color: #F4FDAF;
-}
-
-.options{
-    /* display: flex; */
-    /* justify-content: center; */
-    
 }
 
 .option{
