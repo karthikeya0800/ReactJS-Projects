@@ -1,48 +1,45 @@
-import React from "react"
+import React from "react";
 
 export default function Quizpage(props) {
+  const { id, question, options, selected, correct_answer } = props.questionObj;
 
-    const [options,setOptions]=React.useState(props.options)
+  // console.log(props.options);
 
-    function handleOptionClick(id) {
-        console.log("clicked",id);
-        setOptions(ele => options.map(obj => (
-            id === obj.id ? { ...obj, isClicked: !obj.isClicked } : { ...obj, isClicked: false }
-        )))
+  function handleResult(option) {
+    if (props.isChecked) {
+      if (option === correct_answer) {
+        return "darkgreen";
+      }
+      if (selected !== correct_answer && option === selected) {
+        return "red";
+      }
     }
 
-    function updateScore(){
-        options.forEach(obj => {
-            if(obj.isClicked && obj.value===obj.correct){
-                console.log("insetques");
-                props.setQuestion(ele=>props.allQuestions.map(ele=>(
-                    ele.id===props.id?{...ele, score:!ele.score, options:options}:{...ele,options:options}
-                )))
-            }
-        })
+    if (selected === option) {
+      return "yellow";
     }
+  }
 
-    React.useEffect(()=>updateScore(),options)
-    
-    // console.log(props.options);
+  const optionTags = props.questionObj.options.map((option) => (
+    <p
+      className="option"
+      key={option}
+      onClick={() => props.handleOptionClick(option, props.questionObj.id)}
+      style={{
+        background: handleResult(option),
+      }}>
+      {option}
+    </p>
+  ));
 
-    const optionTags = options.map(option =>
-        <p
-            className="option"
-            onClick={()=>handleOptionClick(option.id)}
-            style={{background:option.isClicked?"#C4F1BE":""}}
-        >
-            {option.value}
-        </p>)
-
-    return (
-        <div>
-            <h3 className="question">{props.question}</h3>
-            <div className="options">
-                {optionTags}
-                <hr></hr>
-            </div>
-            {/* <button className="check" onClick={final()}>Check answers {finalScore}</button> */}
-        </div>
-    )
+  return (
+    <div>
+      <h3 className="question">{props.questionObj.question}</h3>
+      <div className="options">
+        {optionTags}
+        <hr></hr>
+      </div>
+      {/* <button className="check" onClick={final()}>Check answers {finalScore}</button> */}
+    </div>
+  );
 }
