@@ -2,47 +2,52 @@ import React from "react"
 
 export default function Quizpage(props) {
 
-    const [options,setOptions]=React.useState(props.options)
-
-    function handleOptionClick(id) {
-        console.log("clicked",id);
-        setOptions(ele => options.map(obj => (
-            id === obj.id ? { ...obj, isClicked: !obj.isClicked } : { ...obj, isClicked: false }
+    const { id, question, options, selected, correct_answer } = props.questionObj
+    const [isClicked,setIsClicked]=React.useState(false) //Used to toggle option selection when clicked again
+    function handleOptionClick(option, id) {
+        setIsClicked(()=>!isClicked)
+        props.setAllQuestions(props.allQuestions.map(val => (
+            id === val.id ? { ...val, selected: option} : val
         )))
     }
 
-    function updateScore(){
-        options.forEach(obj => {
-            if(obj.isClicked && obj.value===obj.correct){
-                console.log("insetques");
-                props.setQuestion(ele=>props.allQuestions.map(ele=>(
-                    ele.id===props.id?{...ele, score:!ele.score, options:options}:{...ele,options:options}
-                )))
+    function updateOptionColor(option) {
+        if (props.isChecked) {
+            if (option === correct_answer) {
+                return { background: "#94D7A2", border: "none" }
+            } else if (option === selected) {
+                return { background: "#F8BCBC", border: "none" };
+            } else {
+                return { opacity: "0.5" }
             }
-        })
+        } else {
+            if (selected === option && isClicked) {
+                return { background: "#D6DBF5", border: "none" }
+            }
+        }
     }
 
-    React.useEffect(()=>updateScore(),options)
-    
-    // console.log(props.options);
-
-    const optionTags = options.map(option =>
-        <p
-            className="option"
-            onClick={()=>handleOptionClick(option.id)}
-            style={{background:option.isClicked?"#C4F1BE":""}}
-        >
-            {option.value}
-        </p>)
+    const optionTags = options.map(option => {
+        return (
+            <p
+                key={option}
+                className="option"
+                onClick={() => !props.isChecked && handleOptionClick(option, id)}
+                style={updateOptionColor(option)}
+            >
+                {option}
+            </p>
+        )
+    }
+    )
 
     return (
         <div>
-            <h3 className="question">{props.question}</h3>
+            <h3 className="question">{question}</h3>
             <div className="options">
                 {optionTags}
-                <hr></hr>
             </div>
-            {/* <button className="check" onClick={final()}>Check answers {finalScore}</button> */}
+            <hr className="underline"></hr>
         </div>
     )
 }

@@ -2,12 +2,21 @@ body{
     background-color: #222222;
 }
 
-.home{
-    width: 600px;
-    height: 600px;
+.main{
+    overflow: scroll;
+    width: 500px;
+    height: 500px;
     margin: 100px auto;
-    background-color: #394F49;
-    border: 2px solid #EFDD8D;
+    padding: 40px 80px;
+    color: #293264;
+    background: linear-gradient(to right, #DEEBF8,#F5F7FB,#DEEBF8);
+    border: 2px solid #182a63;
+}
+
+.home{
+    height: 100%;
+    margin: 0 auto;
+    color: #293264;
 
     text-align: center;    
     display: flex;
@@ -19,66 +28,54 @@ body{
 .home>h1{
     margin: 0;
     font-family: "Karla",sans-serif;
-    font-size: 70px;
     font-weight: 700;
-    color: #EFDD8D;
 }
 
 .home>p{
     font-family: "inter",sans-serif;
     font-weight: 400;
-    font-size: 20px;
-    color:#EFDD8D
+    font-size: 16px;
 }
 
 .home>button{
+    cursor: pointer;
     border: none;
     font-family: "inter",sans-serif;
-    font-weight: 700;
-    font-size: 25px;
-    color: #394F49;
-    background-color: #EFDD8D;
+    font-weight: 500;
+    font-size: 16px;
+    color: #F5F7FB;
+    background-color: #293264;
 
     border-radius: 15px;
     width: 200px;
     height: 50px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
-.main{
-    overflow: scroll;
-    width: 600px;
-    height: 600px;
-    margin: 100px auto;
-    background-color: #394F49;
-    border: 2px solid #EFDD8D;
+.underline{
+    margin:30px 0;
 }
 
 .question{
-    margin: 10px;
-    font-weight: 400;
+    margin: 10px 0;
+    font-weight: 700;
     font-family: "karla",sans-serif;
     font-size: 16px;
-    color: #F4FDAF;
-}
-
-.options{
-    /* display: flex; */
-    /* justify-content: center; */
-    
 }
 
 .option{
     width: 100px;
     margin: 10px;
     cursor: pointer;
-    text-align: center;
+    display: flex;
+
     font-family: "inter",sans-serif;
     font-size: 12px;
     background-color: #F5F7FB;
     padding: 4px 15px;
+    border: 1px solid #4D5B9E;
     border-radius: 8px;
-    color: #222222
+    font-weight: 500;
 }
 
 .check{
@@ -89,8 +86,34 @@ body{
     text-align: center;
     font-family: "inter",sans-serif;
     font-weight: 700;
-    color: #222222;
-    background-color: #698F3F;
+    color: #f5f7fb;
+    background-color: #4D5B9E;
     display: block;
-    margin: 50px auto;
+    margin: 20px auto;
+}
+
+.end{
+    display: flex;
+    font-family: "inter",sans-serif;
+    font-weight: 700;
+    color:#293264;
+    text-align: center;
+}
+
+.playagain{
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    font-family: "inter",sans-serif;
+    font-weight: 700;
+    color: #f5f7fb;
+    background-color: #4D5B9E;
+    margin-left: auto;
+
+}
+
+.bug{
+    font-size: 5px;
 }
